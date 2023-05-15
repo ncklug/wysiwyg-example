@@ -1,0 +1,10 @@
+{
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "avoid",
+    "importOrder": ["string.prototype.repeat/repeat", "whatwg-fetch", "^react$", "^(?!react|src).*$", "^src/.*$"],
+    "importOrderSeparation": true
+  }
+  
