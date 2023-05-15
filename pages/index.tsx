@@ -1,14 +1,15 @@
 import React from 'react'
 
 import Head from 'next/head'
+import { Button } from '@mantine/core'
 
-export default function Home() {
+export default () => {
   return (
     <div>
       <Head>
         <title>Create Next App</title>
       </Head>
-      hi!!
+      <Button>hi</Button>
     </div>
   )
 }
