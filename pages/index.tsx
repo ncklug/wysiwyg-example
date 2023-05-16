@@ -1,12 +1,7 @@
 import React from 'react'
 
 import Head from 'next/head'
-import { Button } from '@mantine/core'
-import { AgGridReact } from 'ag-grid-react'
-import { AgChartsReact } from 'ag-charts-react'
-
-import 'ag-grid-community/styles/ag-grid.css' // Core grid CSS, always needed
-import 'ag-grid-community/styles/ag-theme-alpine.css' // Optional theme CSS
+import { Button, Card } from '@mantine/core'
 
 const SAMPLE_DATA = [{ a: 'aa', b: 'bb', c: 'cc' }]
 const COL_DEF = [
@@ -54,17 +49,6 @@ export default () => {
         <title>Create Next App</title>
       </Head>
       <Button>hi</Button>
-
-      <div className="ag-theme-alpine" style={{ width: 500, height: 500 }}>
-        <AgGridReact
-          rowData={SAMPLE_DATA} // Row Data for Rows
-          columnDefs={COL_DEF} // Column Defs for Columns
-          defaultColDef={DEFAULT_COL_DEF} // Default Column Properties
-          animateRows={true} // Optional - set to 'true' to have rows animate when sorted
-          rowSelection="multiple" // Options - allows click selection of rows
-        />
-      </div>
-      <AgChartsReact options={CHART_OPTIONS} />
     </div>
   )
 }
