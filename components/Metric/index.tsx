@@ -28,14 +28,14 @@ export const Metric = ({
           {metric}
         </Text>
         <Box
-          sx={() => ({
+          sx={{
             borderRadius: 4,
             backgroundColor: '#DFEFE5',
             color: '#008663',
             display: 'inline-flex',
             alignItems: 'center',
             lineHeight: '24px',
-          })}
+          }}
           component="span"
         >
           <Box mr={-4} ml={-4} component="span" display="inline-flex">
