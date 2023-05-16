@@ -13,8 +13,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     withNormalizeCSS
     theme={{
       /** Put your mantine theme override here */
-      fontFamily: 'Inter',
+      fontFamily: undefined,
       colorScheme: 'light',
+      colors: {
+        secondaryGrey: ['#8A8A8A'],
+      },
     }}
   >
     <main className={inter.className}>

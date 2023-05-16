@@ -2,6 +2,7 @@ import React from 'react'
 
 import Head from 'next/head'
 import { Button, Card } from '@mantine/core'
+import Link from 'next/link'
 
 const SAMPLE_DATA = [{ a: 'aa', b: 'bb', c: 'cc' }]
 const COL_DEF = [
@@ -49,6 +50,7 @@ export default () => {
         <title>Create Next App</title>
       </Head>
       <Button>hi</Button>
+      <Link href="/components">Components</Link>
     </div>
   )
 }
