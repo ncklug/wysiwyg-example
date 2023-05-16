@@ -1,3 +1,3 @@
 import { Card } from '@mantine/core'
 
-export { Card }
+export { Card as BaseCard }
