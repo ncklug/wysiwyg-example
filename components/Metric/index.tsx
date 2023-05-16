@@ -1,7 +1,7 @@
 import { Box } from '@mantine/core'
 import { Text } from 'components/Text'
 import { toPrecision } from 'utilFunctions/formatNumber'
-import { IconArrowNarrowUp, IconArrowNarrowDown } from '@tabler/icons-react'
+import { IconArrowUp, IconArrowDown } from '@tabler/icons-react'
 
 type MetricProps = {
   metric: number
@@ -19,12 +19,12 @@ export const Metric = ({
 }: MetricProps) => {
   const percentChange = (metric - comparator.metric) / comparator.metric
   const roundedValue = toPrecision(percentChange, changePrecision)
-  const Icon = roundedValue >= 0 ? IconArrowNarrowUp : IconArrowNarrowDown
+  const Icon = roundedValue >= 0 ? IconArrowUp : IconArrowDown
 
   return (
     <div>
       <div>
-        <Text fz="xl" pr="sm" span>
+        <Text fz="xl" pr={6} span>
           {metric}
         </Text>
         <Box
@@ -34,11 +34,14 @@ export const Metric = ({
             color: '#008663',
             display: 'inline-flex',
             alignItems: 'center',
+            lineHeight: '24px',
           })}
           component="span"
         >
-          <Icon height="10px" />
-          <Text span fz="xs" weight={700}>
+          <Box mr={-4} ml={-4} component="span" display="inline-flex">
+            <Icon height="14px" />
+          </Box>
+          <Text span fz="xs" weight={700} pr={2}>
             {roundedValue}%
           </Text>
         </Box>
@@ -47,7 +50,9 @@ export const Metric = ({
         <Text fz="sm" color="#8A8A8A" span>
           vs {comparator.label}:{' '}
         </Text>
-        <Text span>{comparator.metric}</Text>
+        <Text fz="sm" span>
+          {comparator.metric}
+        </Text>
       </div>
     </div>
   )
