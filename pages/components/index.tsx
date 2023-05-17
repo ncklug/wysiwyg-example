@@ -4,10 +4,11 @@ import { Paper } from '@mantine/core'
 import Link from 'next/link'
 
 const ROUTES = ['metric']
+
 export default () => {
   return (
     <Paper m="xl">
-      Components:
+      Component library:
       <ul>
         {ROUTES.map(route => (
           <li key={route}>

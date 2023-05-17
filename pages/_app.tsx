@@ -4,6 +4,8 @@ import { MantineProvider } from '@mantine/core'
 import { Inter } from 'next/font/google'
 import { AppProps } from 'next/app'
 
+import { DevSidebar } from 'components/DevSidebar/DevSidebar'
+
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -21,7 +23,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     }}
   >
     <main className={inter.className}>
-      <Component {...pageProps} />
+      <DevSidebar>
+        <Component {...pageProps} />
+      </DevSidebar>
     </main>
   </MantineProvider>
 )

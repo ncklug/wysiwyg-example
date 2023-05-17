@@ -1,11 +1,11 @@
-import { Metric } from 'components/Metric'
+import { JsxMetric } from 'components/Metric/JsxMetric'
 import { StoriesWrapper, StoryWrapper } from 'components/StoryWrapper'
 
 export default () => {
   return (
     <StoriesWrapper>
       <StoryWrapper name="Basic Metric">
-        <Metric
+        <JsxMetric
           metric={97}
           comparator={{ label: 'last year', metric: 90 }}
           changePrecision={0}

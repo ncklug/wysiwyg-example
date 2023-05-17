@@ -3,7 +3,7 @@ import { Text } from 'components/Text'
 import { toPrecision } from 'utilFunctions/formatNumber'
 import { IconArrowUp, IconArrowDown } from '@tabler/icons-react'
 
-type MetricProps = {
+export type MetricProps = {
   metric: number
   comparator: {
     metric: number
@@ -12,7 +12,7 @@ type MetricProps = {
   changePrecision: number
 }
 
-export const Metric = ({
+export const JsxMetric = ({
   metric,
   comparator,
   changePrecision,
